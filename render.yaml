@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: eld-trip-planner-backend
+    runtime: python
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt && python manage.py collectstatic --no-input && python manage.py migrate
+    startCommand: gunicorn config.wsgi:application
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: "false"
+      - key: ALLOWED_HOSTS
+        value: eld-trip-planner-backend.onrender.com
+      - key: CORS_ALLOWED_ORIGINS
+        value: https://your-frontend.vercel.app
+      - key: PYTHON_VERSION
+        value: "3.11.0"

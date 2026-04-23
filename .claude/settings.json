@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/User/Documents/GitHub/eld-trip-planner-fronend/frontend/**)",
+      "Read(//c/Users/User/Documents/GitHub/eld-trip-planner-fronend/**)"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\User\\Documents\\GitHub\\eld-trip-planner-fronend"
+    ]
+  }
+}
